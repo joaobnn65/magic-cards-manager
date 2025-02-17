@@ -1,0 +1,129 @@
+/*Estilização */
+
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #d4af37; /* Dourado */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('/images/Design_sem_nome_2.png');/* Caminho relativo ao servidor */
+    background-size: cover;  /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+    color: #fff; /* Ajusta a cor do texto para melhor contraste */
+}
+
+/* Cabeçalho */
+h1 {
+    color: #f39c12; /* Laranja vibrante */
+    font-size: 28px;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+}
+
+/* Barra de busca */
+.search-bar {
+    margin: 20px auto;
+    padding: 10px;
+    background: #222;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.search-bar input, .search-bar select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #d4af37;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background: #f39c12;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #d35400;
+}
+
+/* Tabela */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #222;
+    box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.2);
+}
+
+th, td {
+    border: 1px solid #d4af37;
+    padding: 10px;
+}
+
+th {
+    background: #111;
+    color: #f39c12;
+    text-transform: uppercase;
+}
+
+td {
+    background: #1c1c1c;
+}
+
+/* Botões */
+button {
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 20px;
+    background: #000;
+    color: #d4af37;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.logout-btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #c9302c;
+}

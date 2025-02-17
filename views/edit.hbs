@@ -1,0 +1,19 @@
+<h2>Editar Carta</h2>
+<form action="/cartas/edit/{{carta.id}}" method="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" value="{{carta.nome}}" required>
+    
+    <label>Descrição:</label>
+    <input type="text" name="descricao" value="{{carta.descricao}}" required>
+    
+    <label>Tipo:</label>
+    <select name="tipo_id">
+        <option value="1" {{#if (eq carta.tipo_id 1)}}selected{{/if}}>Criatura</option>
+        <option value="2" {{#if (eq carta.tipo_id 2)}}selected{{/if}}>Feitiço</option>
+        <option value="3" {{#if (eq carta.tipo_id 3)}}selected{{/if}}>Instantâneo</option>
+        <option value="4" {{#if (eq carta.tipo_id 4)}}selected{{/if}}>Encantamento</option>
+        <option value="5" {{#if (eq carta.tipo_id 5)}}selected{{/if}}>Artefato</option>
+    </select>
+
+    <button type="submit">Salvar Alterações</button>
+</form>

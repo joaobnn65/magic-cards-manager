@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Carta</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        h1 { color: #444; }
+        form { width: 50%; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px 15px; background: #444; color: white; border: none; cursor: pointer; }
+        button:hover { background: #666; }
+    </style>
+</head>
+<body>
+    <h1>➕ Adicionar Nova Carta</h1>
+    
+    <form action="/cartas" method="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" required>
+
+    <label>Descrição:</label>
+    <input type="text" name="descricao" required>
+
+    <label>Tipo:</label>
+    <select name="tipo_id" required>
+        <option value="1">Criatura</option>
+        <option value="2">Feitiço</option>
+        <option value="3">Instantâneo</option>
+        <option value="4">Encantamento</option>
+        <option value="5">Artefato</option>
+    </select>
+
+    <button type="submit">Adicionar Carta</button>
+</form>
+
+
+    <p><a href="/cartas/list">🔙 Voltar</a></p>
+</body>
+</html>
