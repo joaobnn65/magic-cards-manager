@@ -1,11 +1,21 @@
-<h2>Login</h2>
-<form action="/login" method="POST">
-    <label>Email:</label>
-    <input type="email" name="email" required>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        
+        <label>Senha:</label>
+        <input type="password" name="senha" required>
 
-    <label>Senha:</label>
-    <input type="password" name="senha" required>
-
-    <button type="submit">Entrar</button>
-</form>
-<p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+        <button type="submit">Entrar</button>
+    </form>
+    <p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+</body>
+</html>

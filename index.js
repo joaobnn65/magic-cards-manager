@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 
 // Adiciona suporte a arquivos estáticos (CSS, JS, imagens)
-app.use(express.static("public")); // <-- ADICIONE ESTA LINHA
+app.use(express.static("public")); // 
 
 // Configuração da sessão
 app.use(

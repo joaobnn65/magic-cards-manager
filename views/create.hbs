@@ -16,27 +16,30 @@
 </head>
 <body>
     <h1>➕ Adicionar Nova Carta</h1>
-    
+
+    {{#if usuario}}
+        <p class="user-info">👤 Usuário logado: <strong>{{usuario.nome}}</strong></p>
+    {{/if}}
+
     <form action="/cartas" method="POST">
-    <label>Nome:</label>
-    <input type="text" name="nome" required>
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
 
-    <label>Descrição:</label>
-    <input type="text" name="descricao" required>
+        <label>Descrição:</label>
+        <input type="text" name="descricao" required>
 
-    <label>Tipo:</label>
-    <select name="tipo_id" required>
-        <option value="1">Criatura</option>
-        <option value="2">Feitiço</option>
-        <option value="3">Instantâneo</option>
-        <option value="4">Encantamento</option>
-        <option value="5">Artefato</option>
-    </select>
+        <label>Tipo:</label>
+        <select name="tipo_id" required>
+            <option value="1">Criatura</option>
+            <option value="2">Feitiço</option>
+            <option value="3">Instantâneo</option>
+            <option value="4">Encantamento</option>
+            <option value="5">Artefato</option>
+        </select>
 
-    <button type="submit">Adicionar Carta</button>
-</form>
+        <button type="submit">Adicionar Carta</button>
+    </form>
 
-
-    <p><a href="/cartas/list">🔙 Voltar</a></p>
+    <p><a href="/cartas">🔙 Voltar</a></p>
 </body>
 </html>
