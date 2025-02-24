@@ -4,42 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Carta</title>
+    
+    <!-- Fonte temática -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        h1 { color: #444; }
-        form { width: 50%; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
-        label { display: block; margin-top: 10px; font-weight: bold; }
-        input, select { width: 100%; padding: 8px; margin-top: 5px; }
-        button { margin-top: 15px; padding: 10px 15px; background: #444; color: white; border: none; cursor: pointer; }
-        button:hover { background: #666; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'IM Fell English SC', serif;
+        }
+
+        /* Fundo com imagem personalizada */
+        body {
+            background: url("/images/Design_sem_nome_2.png") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: rgba(17, 17, 17, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            border: 3px solid gold;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            width: 850px; /* Aumentado apenas na largura */
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Pirata One', cursive;
+            font-size: 36px;
+            color: gold;
+            text-shadow: 2px 2px 5px black;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 12px;
+            color: gold;
+            font-size: 18px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 2px solid gold;
+            border-radius: 8px;
+            background: #222;
+            color: white;
+            outline: none;
+            font-size: 18px;
+        }
+
+        input:focus, select:focus {
+            background: #333;
+            border-color: orange;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            border: 2px solid black;
+            border-radius: 8px;
+            background: gold;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 18px;
+            box-shadow: 0px 3px 10px rgba(204, 153, 0, 0.5);
+        }
+
+        button:hover {
+            background: orange;
+            transform: scale(1.05);
+            box-shadow: 0px 5px 12px rgba(255, 140, 0, 0.8);
+        }
+
+        .back-link {
+            margin-top: 20px;
+            color: gold;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+            color: orange;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-    <h1>➕ Adicionar Nova Carta</h1>
 
-    {{#if usuario}}
-        <p class="user-info">👤 Usuário logado: <strong>{{usuario.nome}}</strong></p>
-    {{/if}}
+    <div class="form-container">
+        <h1>➕ Adicionar Nova Carta</h1>
 
-    <form action="/cartas" method="POST">
-        <label>Nome:</label>
-        <input type="text" name="nome" required>
+        {{#if usuario}}
+            <p class="user-info">👤 Usuário logado: <strong>{{usuario.nome}}</strong></p>
+        {{/if}}
 
-        <label>Descrição:</label>
-        <input type="text" name="descricao" required>
+        <form action="/cartas" method="POST">
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
 
-        <label>Tipo:</label>
-        <select name="tipo_id" required>
-            <option value="1">Criatura</option>
-            <option value="2">Feitiço</option>
-            <option value="3">Instantâneo</option>
-            <option value="4">Encantamento</option>
-            <option value="5">Artefato</option>
-        </select>
+            <label>Descrição:</label>
+            <input type="text" name="descricao" required>
 
-        <button type="submit">Adicionar Carta</button>
-    </form>
+            <label>Tipo:</label>
+            <select name="tipo_id" required>
+                <option value="1">Criatura</option>
+                <option value="2">Feitiço</option>
+                <option value="3">Instantâneo</option>
+                <option value="4">Encantamento</option>
+                <option value="5">Artefato</option>
+            </select>
 
-    <p><a href="/cartas">🔙 Voltar</a></p>
+            <button type="submit">Adicionar Carta</button>
+        </form>
+
+        <a href="/cartas" class="back-link">🔙 Voltar</a>
+    </div>
+
 </body>
 </html>

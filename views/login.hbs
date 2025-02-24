@@ -1,21 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Magic Login</title>
+  
+  <!-- Fonte temática (ex.: "Pirata One") -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Pirata+One&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #333;
+      font-family: 'IM Fell English SC', serif;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #111;
+      border: 2px solid gold;
+      border-radius: 10px;
+      padding: 30px;
+      width: 400px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Pirata One', cursive;
+      font-size: 32px;
+      color: gold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 15px;
+      color: #ffcc00;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid gold;
+      border-radius: 5px;
+      background: #222;
+      color: white;
+      outline: none;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    input:focus {
+      background: #333;
+      border-color: orange;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      border: 2px solid black;
+      border-radius: 5px;
+      background: gold;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+      box-shadow: 0px 2px 8px rgba(204, 153, 0, 0.5);
+    }
+
+    button:hover {
+      background: orange;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 10px rgba(255, 140, 0, 0.7);
+    }
+
+    p {
+      margin-top: 15px;
+    }
+
+    a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: orange;
+    }
+  </style>
 </head>
 <body>
-    <h1>Login</h1>
+  <div class="container">
+    <h1>Magic Login</h1>
     <form action="/login" method="POST">
-        <label>Email:</label>
-        <input type="email" name="email" required>
-        
-        <label>Senha:</label>
-        <input type="password" name="senha" required>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
 
-        <button type="submit">Entrar</button>
+      <label for="senha">Senha:</label>
+      <input type="password" name="senha" id="senha" required />
+
+      <button type="submit">Entrar</button>
     </form>
     <p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+  </div>
 </body>
 </html>

@@ -8,18 +8,51 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Pirata+One&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: "IM Fell English SC", sans-serif; text-align: center; background-color: #f4f4f4; }
-        h1 { color: #444; }
-        table { width: 80%; margin: 20px auto; border-collapse: collapse; background: white; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
-        th, td { border: 1px solid #ddd; padding: 10px; }
-        th { background-color: #444; color: white; cursor: pointer; }
+        body { 
+            font-family: "IM Fell English SC", sans-serif; 
+            text-align: center; 
+            background-color: #1a1a1a; 
+            color: white;
+        }
+        h1 { color: #ffcc00; }
+        table { 
+            width: 80%; 
+            margin: 20px auto; 
+            border-collapse: collapse; 
+            background: #333; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+        }
+        th, td { 
+            border: 1px solid #555; 
+            padding: 10px; 
+            color: white;
+        }
+        th { 
+            background-color: #222; 
+            color: #ffcc00; 
+            cursor: pointer; 
+        }
         form { display: inline; }
-        button { background-color: #ff4d4d; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+        button { 
+            background-color: #ff4d4d; 
+            color: white; 
+            border: none; 
+            padding: 5px 10px; 
+            cursor: pointer; 
+        }
         button:hover { background-color: #cc0000; }
-        a { text-decoration: none; color: #007BFF; }
+        a { text-decoration: none; color: #ffcc00; font-weight: bold; }
         a:hover { text-decoration: underline; }
         .search-bar { margin-bottom: 20px; }
-        .reset-btn { background-color: #f4f4f4; color: black; text-decoration: none; padding: 5px 10px; border: 1px solid #ddd; margin-left: 10px; cursor: pointer; }
+        .reset-btn { 
+            background-color: #f4f4f4; 
+            color: black; 
+            text-decoration: none; 
+            padding: 5px 10px; 
+            border: 1px solid #ddd; 
+            margin-left: 10px; 
+            cursor: pointer; 
+        }
         .reset-btn:hover { background-color: #ddd; }
 
         /* Estilo do botão de logout */
@@ -42,6 +75,26 @@
             font-weight: bold;
             color: #fbff00;
             margin-bottom: 10px;
+        }
+
+        /* Botão adicionar carta mais destacado */
+        .add-card-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ffcc00;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(255, 204, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
+            border: 2px solid black;
+        }
+        .add-card-btn:hover {
+            background-color: #ffaa00;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -96,6 +149,6 @@
         {{/each}}
     </table>
 
-    <p><a href="/cartas/new">➕ Adicionar Nova Carta ➕</a></p>
+    <p><a href="/cartas/new" class="add-card-btn">➕ Adicionar Nova Carta ➕</a></p>
 </body>
 </html>
